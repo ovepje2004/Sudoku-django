@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            margin: 0px;
+        }
+        #container{
+            background: linear-gradient(rgb(160, 184, 255),rgb(255, 219, 164), #ffa938 ) fixed;
+            height:752px;
+        }
+        header{
+            background:rgb(115, 143, 209);
+            height: 39px;
+        }
+        #DDiyong{
+            margin-top: 0px;
+            display: inline;
+            padding: 0px;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 665px;
+        }
+        #title{
+            font-size: 80px;
+            margin-top: 120px;
+            text-align: center;
+        }
+        h1{
+            font-size: 84px;
+        }
+        nav{
+            text-align: center;
+        }
+        #level{
+            margin-left: 12px;
+            font-size: 27px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            font-weight: bold;
+
+        }
+        button{
+            display: block;
+            margin-top: 15px;
+            font-size: 35px;
+            background: rgb(255, 242, 170);
+            border:3px solid rgb(204, 204, 204);
+            border-radius: 12px;
+        }
+        form{
+            margin-top: 40px;
+        }
+        #hard:hover{
+            background: rgb(253, 138, 85);
+            box-shadow: 5px 5px 5px rgb(253, 253, 219);
+            border: 1px rgb(253, 138, 85);
+        }
+        #normal:hover{
+            background: rgb(255, 204, 127);
+            box-shadow: 5px 5px 5px rgb(254, 255, 229);
+            border: 1px rgb(255, 204, 127);
+        }
+        #easy:hover{
+            background: rgb(218, 227, 255);
+            box-shadow: 5px 5px 5px rgb(254, 255, 217);
+            border: 1px  rgb(218, 227, 255);
+        }
+
+
+        .bubbles img{
+            width: 50px;
+            animation: bubble 7s linear infinite;
+        }
+        .bubbles{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 0px;
+        }
+        @keyframes bubble{
+            0%{
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50%{
+
+                opacity: 1;
+            }
+            70%{
+
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(-80vh);
+                opacity: 0;
+            }
+        }
+
+        .bubbles img:nth-child(1){
+            animation-delay: 2s;
+            width: 25px;
+        }
+        .bubbles img:nth-child(2){
+            animation-delay: 1s;
+        }
+        .bubbles img:nth-child(3){
+            animation-delay: 3s;
+
+        }
+        .bubbles img:nth-child(4){
+            animation-delay: 4.5s;
+        }
+        .bubbles img:nth-child(5){
+            animation-delay: 3s;
+            width: 25px;
+        }
+        .bubbles img:nth-child(6){
+            animation-delay: 6s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(7){
+            animation-delay: 5s;
+        }
+        .bubbles img:nth-child(8){
+            animation-delay: 1s;
+
+        }
+        .bubbles img:nth-child(9){
+            animation-delay: 3s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(10){
+            animation-delay: 0.5s;
+            width: 15px;
+        }
+        .bubbles img:nth-child(11){
+            animation-delay: 2s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(12){
+            animation-delay: 1s;
+            width: 50px;
+        }
+        .bubbles img:nth-child(13){
+            animation-delay: 0.8s;
+            width: 30px;
+        }
+        .bubbles img:nth-child(14){
+            animation-delay: 4s;
+            width: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+            <header>
+                <a href="sudoku/ranking"><img src="https://postfiles.pstatic.net/MjAyMDExMDhfMjM3/MDAxNjA0ODM1MjgxMzcw.95E9zRZPWHJYyxOSJUZnbEI8pHagA_dLFxdIKjTSiFYg.N0SGJ7SPUJY981LhSJC8ufOx0Vu68KLlBEzYK_bt4eMg.PNG.ovepje0224/ranking.png?type=w773" height="39px" style="display: inline;"></a>
+            </header>
+            <article id="title">
+                <h1>Sudoku</h1>
+            </article>
+            <nav>
+                <form>
+                    <pre id="level">난이도 선택: </pre>
+                    <a href="sudoku/index"><button type="button" id="easy" style="margin-left: 730px;">easy</button></a>
+                    <a href="sudoku/index"><button type="button" id="normal" style="margin-left: 713px;">normal</button></a>
+                    <a href="sudoku/index"><button type="button" id="hard" style="margin-left: 730px;">hard</button></a>
+                </form>
+            </nav>
+        </div>
+        <div class="bubbles">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+        </div>
+</body>
+</html>

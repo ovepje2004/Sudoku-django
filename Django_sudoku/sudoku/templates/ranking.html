@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <style>
+        #main-flexbox {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            background: linear-gradient(rgb(112, 147, 250), #fcd9ef ,rgb(255, 255, 255)) fixed;
+        }
+        #content-flexbox {
+            display: flex;
+            width: 70%;
+            flex-flow: row;
+        }
+        #dummy-flexbox {
+            display: flex;
+            width: 15%;
+            flex-flow: column;
+        }
+        #button-flexbox {
+            display: flex;
+            width: 20%;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        #main-flexbox {
+            margin-top: 70px;
+        }
+        header{
+            background:rgb(115, 143, 209);
+            height: 40px;
+        }
+        #sudoku{
+            color: white;
+            margin-left: 690px;
+
+        }
+        #ranking-btn{
+            background-color:  rgb(255, 181, 227);
+            border-color: rgb(255, 181, 227);
+        }
+        img{
+            display: inline;
+        }
+        article{
+            width: 100%;
+            height: 800px;
+            margin-top: 0px;
+            background: linear-gradient(rgb(112, 147, 250), #fcd9ef ,rgb(255, 255, 255)) fixed;
+        }
+        #sudokutitle{
+            text-align: center;
+            color: white;
+        }
+        .bubbles img{
+            width: 50px;
+            animation: bubble 7s linear infinite;
+        }
+        .bubbles{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -70px;
+        }
+        @keyframes bubble{
+            0%{
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50%{
+
+                opacity: 1;
+            }
+            70%{
+
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(-80vh);
+                opacity: 0;
+            }
+        }
+
+        .bubbles img:nth-child(1){
+            animation-delay: 2s;
+            width: 25px;
+        }
+        .bubbles img:nth-child(2){
+            animation-delay: 1s;
+        }
+        .bubbles img:nth-child(3){
+            animation-delay: 3s;
+
+        }
+        .bubbles img:nth-child(4){
+            animation-delay: 4.5s;
+        }
+        .bubbles img:nth-child(5){
+            animation-delay: 3s;
+            width: 25px;
+        }
+        .bubbles img:nth-child(6){
+            animation-delay: 6s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(7){
+            animation-delay: 5s;
+        }
+        .bubbles img:nth-child(8){
+            animation-delay: 1s;
+
+        }
+        .bubbles img:nth-child(9){
+            animation-delay: 3s;
+            width: 40px;
+        }
+        .bubbles img:nth-child(10){
+            animation-delay: 0.5s;
+            width: 15px;
+        }
+        .bubbles img:nth-child(11){
+            animation-delay: 2s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(12){
+            animation-delay: 1s;
+            width: 50px;
+        }
+        .bubbles img:nth-child(13){
+            animation-delay: 0.8s;
+            width: 30px;
+        }
+        .bubbles img:nth-child(14){
+            animation-delay: 4s;
+            width: 15px;
+        }
+    </style>
+</head>
+<body>
+<article>
+        <header>
+                <h3 id="sudokutitle">Sudoku</h3>
+            </div>
+        </header>
+
+    <div id='main-flexbox'>
+        <div id='nav-bar-flexbox'>
+            <h3>Sudoku Ranking</h3>
+        </div>
+        <div id='content-flexbox'>
+            <div id='dummy-flexbox'>
+            </div>
+            <table id='ranking-table' class='table'>
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>이름</th>
+                        <th>경과 시간</th>
+                    </tr>
+                </thead>
+                <tbody id='ranking-list'>
+                </tbody>
+            </table>
+            <div id='button-flexbox'>
+                <a id='ranking-btn' class='btn btn-primary' role='button' href="/">메인 페이지</a>
+            </div>
+        </div>
+    </div>
+</article>
+<div class="bubbles">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+        </div>
+    <script type='text/javascript'>
+        axios.get('/sudoku/ranking').then(get_sudoku_ranking);
+
+        function get_sudoku_ranking(response) {
+            let ranking_data = response.data.data;
+            let ranking_list = document.querySelector('#ranking-list');
+            let count = 1;
+            ranking_data.forEach(element => {
+                let tr = document.createElement('tr');
+                let rankElement = document.createElement('td');
+                let userElement = document.createElement('td');
+                let timeElement = document.createElement('td');
+
+                rankElement.innerText = count.toString();
+                userElement.innerText = element.name;
+                timeElement.innerText = element.elapsed_time;
+                tr.appendChild(rankElement);
+                tr.appendChild(userElement);
+                tr.appendChild(timeElement);
+                ranking_list.appendChild(tr);
+                count += 1;
+            });
+        }
+    </script>
+</body>
+</html>
