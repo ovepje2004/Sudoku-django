@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            width: 1534px;
+            height: 692px;
+            border: 1px solid white;
+            
+        }
+        header{
+            background-color: rgb(115, 143, 209);
+        }
+        #sudoku{
+            color: white;
+            margin-left: 636px;
+        }
+        nav{
+            display: inline;
+            position: absolute;
+            float: left;
+            width: 250px;
+            height: 676px;
+            background-color: rgb(255, 228, 199);
+        }
+        #menu{
+            color:rgb(255, 145, 111);
+            font-size: 27px;
+            margin-left: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        pre{
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(255, 145, 111);
+        }
+        a:hover{
+            background-color: rgb(255, 202, 146);
+            text-decoration-line: none;
+            color:rgb(255, 145, 111);
+            font-size: 20px;
+        } 
+        a{
+            background-color: rgb(255, 228, 199);
+            text-decoration-line: none;
+            font-weight: bold;
+            color:rgb(90, 90, 90);
+        }
+        article{
+            float: left;
+            width: 906px;
+            height: 676px;
+            background: linear-gradient(rgb(160, 184, 255),rgb(255, 230, 242), #ffa938 ) fixed;
+        }
+        aside{
+            display: inline;
+            position: absolute;
+            height: 676px;
+            background-color:rgb(207, 215, 245);
+        }
+        .table {
+            
+            display: inline;
+            box-sizing: content-box;
+            border: 2px solid rgb(255, 255, 255);
+            border-right: 1px solid white;
+            width: 498px;
+            height: 499px;
+            display: grid;
+            grid-template: repeat(9, 55px) / repeat(9, 55px);
+            background-color:  white;
+            margin-left: 199px;
+            margin-top: 50px;
+            float: left;
+            box-shadow: 5px 5px 5px rgb(232, 233, 182);
+            
+        }
+        .element {
+            width: 55px;
+            height: 55px;
+            background-color:rgb(224, 231, 251);
+            border: 2px solid white;
+        }
+        #e1{
+            background-color: rgb(112, 139, 255);
+        }
+        .leftnumbertable{
+            margin-top: 13px;
+            margin: 20px;
+            border: 5px dotted rgb(101, 101, 214);
+        }
+        #leftnumber{
+            font-size: 27px;
+            color: rgb(88, 88, 220);
+        }
+        img{
+            position: absolute;
+            bottom: 0px;
+            
+        }
+        .light{
+            font-size: 27px;
+             color: rgb(88, 88, 220);
+             margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="container">
+        <header>
+            <h1 id="sudoku">SUDOKU</h1>
+        </header>
+        <nav>
+            <h1 id="menu">▶MENU</h1>
+            <br>
+            <pre>               <a href="main.html">🍑게임 포기</a></pre>
+            <pre>               <a href="">🍑게임 재시작</a></pre>
+            <pre>               <a href="">🍑게임 방법</a></pre>
+            <pre>               <a href="ranking.html">🍑랭킹 보기</a></pre>
+            <img src="https://postfiles.pstatic.net/MjAyMDExMDhfMjI2/MDAxNjA0ODI2ODAxNjc1.U8qoBHVMPzgPlk6Ot3vJo5PEQpxPw16nsUlXkuuqdIIg.O_WF1dn9nJSCyCxLXlLYgwGxQI-FfcU4mNOUrPxU3xog.PNG.ovepje0224/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C.png?type=w773" width="230px">
+        </nav>
+    
+        <section>
+            <article>
+                <div class="table">
+                    <div class="element" id="e1" data-x="0" data-y="0" data-section="0"></div>
+                    <div class="element" id="e1" data-x="1" data-y="0" data-section="0"></div>
+                    <div class="element" id="e1" data-x="2" data-y="0" data-section="0"></div>
+                    <div class="element" data-x="1" data-y="1" data-section="0" ></div>
+                    <div class="element" data-x="1" data-y="1" data-section="0" ></div>
+                    <div class="element" data-x="2" data-y="1" data-section="0" ></div>
+                    <div class="element" id="e1" data-x="0" data-y="2" data-section="0"></div>
+                    <div class="element" id="e1" data-x="1" data-y="2" data-section="0"></div>
+                    <div class="element" id="e1" data-x="2" data-y="2" data-section="0"></div>
+            
+                    <div class="element" id="e1" data-x="3" data-y="0" data-section="1"></div>
+                    <div class="element" id="e1" data-x="4" data-y="0" data-section="1"></div>
+                    <div class="element" id="e1" data-x="5" data-y="0" data-section="1"></div>
+                    <div class="element" data-x="3" data-y="1" data-section="1"></div>
+                    <div class="element" data-x="4" data-y="1" data-section="1"></div>
+                    <div class="element" data-x="5" data-y="1" data-section="1"></div>
+                    <div class="element" id="e1" data-x="3" data-y="2" data-section="1"></div>
+                    <div class="element" id="e1" data-x="4" data-y="2" data-section="1"></div>
+                    <div class="element" id="e1" data-x="5" data-y="2" data-section="1"></div>
+            
+                    <div class="element" id="e1" data-x="6" data-y="0" data-section="1"></div>
+                    <div class="element" id="e1" data-x="7" data-y="0" data-section="1"></div>
+                    <div class="element" id="e1" data-x="8" data-y="0" data-section="1"></div>
+                    <div class="element" data-x="6" data-y="1" data-section="1"></div>
+                    <div class="element" data-x="7" data-y="1" data-section="1"></div>
+                    <div class="element" data-x="8" data-y="1" data-section="1"></div>
+                    <div class="element" id="e1" data-x="6" data-y="2" data-section="2"></div>
+                    <div class="element" id="e1" data-x="7" data-y="2" data-section="2"></div>
+                    <div class="element" id="e1" data-x="8" data-y="2" data-section="2"></div>
+            
+                    <div class="element" data-x="0" data-y="3" data-section="3"></div>
+                    <div class="element" data-x="1" data-y="3" data-section="3"></div>
+                    <div class="element" data-x="2" data-y="3" data-section="3"></div>
+                    <div class="element" id="e1" data-x="3" data-y="3" data-section="3"></div>
+                    <div class="element" id="e1" data-x="4" data-y="3" data-section="3"></div>
+                    <div class="element" id="e1" data-x="5" data-y="3" data-section="3"></div>
+                    <div class="element" data-x="6" data-y="3" data-section="3"></div>
+                    <div class="element" data-x="7" data-y="3" data-section="3"></div>
+                    <div class="element" data-x="8" data-y="3" data-section="3"></div>
+            
+                    <div class="element" data-x="0" data-y="4" data-section="4"></div>
+                    <div class="element" data-x="1" data-y="4" data-section="4"></div>
+                    <div class="element" data-x="2" data-y="4" data-section="4"></div>
+                    <div class="element" id="e1" data-x="3" data-y="4" data-section="4"></div>
+                    <div class="element" id="e1" data-x="4" data-y="4" data-section="4"></div>
+                    <div class="element" id="e1" data-x="5" data-y="4" data-section="4"></div>
+                    <div class="element" data-x="6" data-y="4" data-section="4"></div>
+                    <div class="element" data-x="7" data-y="4" data-section="4"></div>
+                    <div class="element" data-x="8" data-y="4" data-section="4"></div>
+            
+                    <div class="element" data-x="0" data-y="5" data-section="5"></div>
+                    <div class="element" data-x="1" data-y="5" data-section="5"></div>
+                    <div class="element" data-x="2" data-y="5" data-section="5"></div>
+                    <div class="element" id="e1" data-x="3" data-y="5" data-section="5"></div>
+                    <div class="element" id="e1" data-x="4" data-y="5" data-section="5"></div>
+                    <div class="element" id="e1" data-x="5" data-y="5" data-section="5"></div>
+                    <div class="element" data-x="6" data-y="5" data-section="5"></div>
+                    <div class="element" data-x="7" data-y="5" data-section="5"></div>
+                    <div class="element" data-x="8" data-y="5" data-section="5"></div>
+            
+                    <div class="element" id="e1" data-x="0" data-y="6" data-section="6"></div>
+                    <div class="element" id="e1" data-x="1" data-y="6" data-section="6"></div>
+                    <div class="element" id="e1" data-x="2" data-y="6" data-section="6"></div>
+                    <div class="element" data-x="3" data-y="6" data-section="6"></div>
+                    <div class="element" data-x="4" data-y="6" data-section="6"></div>
+                    <div class="element" data-x="5" data-y="6" data-section="6"></div>
+                    <div class="element" id="e1" data-x="6" data-y="6" data-section="6"></div>
+                    <div class="element" id="e1" data-x="7" data-y="6" data-section="6"></div>
+                    <div class="element" id="e1" data-x="8" data-y="6" data-section="6"></div>
+            
+                    <div class="element" id="e1" data-x="0" data-y="7" data-section="7"></div>
+                    <div class="element" id="e1" data-x="1" data-y="7" data-section="7"></div>
+                    <div class="element" id="e1" data-x="2" data-y="7" data-section="7"></div>
+                    <div class="element" data-x="3" data-y="7" data-section="7"></div>
+                    <div class="element" data-x="4" data-y="7" data-section="7"></div>
+                    <div class="element" data-x="5" data-y="7" data-section="7"></div>
+                    <div class="element" id="e1" data-x="6" data-y="7" data-section="7"></div>
+                    <div class="element" id="e1" data-x="7" data-y="7" data-section="7"></div>
+                    <div class="element" id="e1" data-x="8" data-y="7" data-section="7"></div>
+            
+                    <div class="element" id="e1" data-x="0" data-y="8" data-section="8"></div>
+                    <div class="element" id="e1" data-x="1" data-y="8" data-section="8"></div>
+                    <div class="element" id="e1" data-x="2" data-y="8" data-section="8"></div>
+                    <div class="element" data-x="3" data-y="8" data-section="8"></div>
+                    <div class="element" data-x="4" data-y="8" data-section="8"></div>
+                    <div class="element" data-x="5" data-y="8" data-section="8"></div>
+                    <div class="element" id="e1" data-x="6" data-y="8" data-section="8"></div>
+                    <div class="element" id="e1" data-x="7" data-y="8" data-section="8"></div>
+                    <div class="element" id="e1" data-x="8" data-y="8" data-section="8"></div>
+                </div>
+                
+    
+    
+            </article>
+        </section>
+        <aside>
+            <div class="leftnumbertable">
+                <h1 id="leftnumber">▶남은 숫자 개수</h1>
+                <ul id="numberlist" style="list-style:none;">
+                    <li style="font-size: 22px;">💎1: </li>
+                    <li style="font-size: 22px;">💎2: </li>
+                    <li style="font-size: 22px;">💎3: </li>
+                    <li style="font-size: 22px;">💎4: </li>
+                    <li style="font-size: 22px;">💎5:</li>
+                    <li style="font-size: 22px;">💎6: </li>
+                    <li style="font-size: 22px;">💎7: </li>
+                    <li style="font-size: 22px;">💎8: </li>
+                    <li style="font-size: 22px;">💎9: </li>
+                </ul>
+            </div>
+            <h1  class="light">▶Time: </h1>
+        </aside>
+    </div>
+    </body>
+</html>

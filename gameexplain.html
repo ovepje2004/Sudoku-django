@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            background-color: rgb(115, 143, 209);
+        }
+        #sudoku{
+            color: white;
+            margin-left: 690px;
+        }
+        article{
+            float: left;
+            width: 1518px;
+            height: 678px;
+            background: linear-gradient(rgb(118, 189, 255),rgb(255, 222, 173), #ffc2f7 ) fixed;
+        }
+        img{
+        float: left;
+        }
+        h2{
+            margin-top: 90px;
+            margin-left: 620px;
+            font-size: 40px;
+            color: rgb(36, 138, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        h3{
+            margin-top: 10px;
+            margin-left: 300px;
+            font-size: 20px;
+            color: white;
+        }
+        pre{
+            margin-left: 450px;
+            margin-top: 20px;
+            width: 600px;
+            height: 300px;
+            border: 4px dotted white;
+            box-shadow: 5px 5px 5px rgb(252, 255, 206); 
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(255, 85, 198)
+        }
+        .bubbles img{
+            width: 50px;
+            animation: bubble 7s linear infinite;
+        }
+        .bubbles{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -70px;
+        }
+        @keyframes bubble{
+            0%{
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50%{
+               
+                opacity: 1;
+            }
+            70%{
+               
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(-80vh);
+                opacity: 0;
+            }
+        }
+    
+        .bubbles img:nth-child(1){
+            animation-delay: 2s;
+            width: 25px;
+        }
+        .bubbles img:nth-child(2){
+            animation-delay: 1s;
+        }
+        .bubbles img:nth-child(3){
+            animation-delay: 3s;
+            
+        }
+        .bubbles img:nth-child(4){
+            animation-delay: 4.5s;
+        }
+        .bubbles img:nth-child(5){
+            animation-delay: 3s;
+            width: 25px;
+        }
+        .bubbles img:nth-child(6){
+            animation-delay: 6s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(7){
+            animation-delay: 5s;
+        }
+        .bubbles img:nth-child(8){
+            animation-delay: 1s;
+            
+        }
+        .bubbles img:nth-child(9){
+            animation-delay: 3s;
+            width: 40px;
+        }
+        .bubbles img:nth-child(10){
+            animation-delay: 0.5s;
+            width: 15px;
+        }
+        .bubbles img:nth-child(11){
+            animation-delay: 2s;
+            width: 20px;
+        }
+        .bubbles img:nth-child(12){
+            animation-delay: 1s;
+            width: 50px;
+        }
+        .bubbles img:nth-child(13){
+            animation-delay: 0.8s;
+            width: 30px;
+        }
+        .bubbles img:nth-child(14){
+            animation-delay: 4s;
+            width: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <a href="main.html"><img src="https://postfiles.pstatic.net/MjAyMDExMDhfMjc0/MDAxNjA0ODM1Mjc4MTQ5.1xUWWHUPgB-TX13kJPnKtWGNb-1lw5X1i6s3XnxWf1Eg.skUOnfXAyd67F8smomO7Tn0nIIMYU3cFPZeYbabtm-kg.PNG.ovepje0224/home.png?type=w773" height="40px"></a> 
+            <h1 id="sudoku">SUDOKU</h1>
+        </header>
+        <article>
+            <h2>🦄게임 방법🦄</h2>
+            <h3>스도쿠 게임의 목표는 다음의 지침에 따라 나머지 빈 칸에 1에서 9까지의 숫자가 겹치지 않도록 채우는 것</h3>
+            <pre>
+                
+ 
+                  🍭 각 가로줄의 빈 칸에 숫자를 한 번만 사용한다.
+
+
+                  🍭 각 세로줄의 빈 칸에 숫자를 한 번만 사용한다.
+
+
+                  🍭 각각의 작은 정사각형(구역)의 빈 칸에 숫자를 
+                        한 번만 사용한다.
+
+
+
+
+
+
+            </pre>
+        </article>
+        <div class="bubbles">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+            <img src="https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png">
+        </div>
+</body>
+</html>
